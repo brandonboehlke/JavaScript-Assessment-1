@@ -1,6 +1,8 @@
-/*Imagine you work for Crayola and your boss just told you that the Crayola1990 API needs to have a url slug generated for all of the colors names.
+/*Imagine you work for Crayola and your boss just told you that the Crayola1990 API needs to have a url slug generated for 
+all of the colors names.
 * To do this you need to lowercase and hyphenate each color in the following array.
-* You can not edit the values in the array by hand as your boss is wanting a loop that can be applied to any set of crayola boxes in the future
+* You can not edit the values in the array by hand as your boss is wanting a loop that can be applied to any set of crayola 
+boxes in the future
 */
 var crayola1990 = [
 	'Scarlet',
@@ -58,6 +60,16 @@ var crayola1990 = [
 	'Antique Brass'
 ];
 
+var newCrayonList = []
+function makeSlug(arr){
+for (i=0;i < arr.length; i++){
+var crayon = arr[i]
+var crayola = crayon.toLowerCase().replace(/ /g, '-')
+newCrayonList.push(crayola)
+}
+return newCrayonList
+} makeSlug(crayola1990)
+console.log(newCrayonList)
 //create a loop that will iterate over each item in the array and then use the String methods to modify the value at the current position in the array
 
 /***** HINTS *******
